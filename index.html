@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behance Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Bēhance</div>
+            <nav>
+                <ul>
+                    <li id="explore-link"><a href="#">Explore</a></li>
+                    <li id="assets-link"><a href="#">Assets</a></li>
+                    <li id="jobs-link"><a href="#">Jobs</a></li>
+                    <li id="pro-link"><a href="#">Behance Pro</a></li>
+                    <li class="dropdown">
+                        <a href="#" onclick="toggleDropdown()">Hire Freelancers</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Graphic Designers</a></li>
+                            <li><a href="#">Brand Designers</a></li>
+                            <li><a href="#">UI/UX Designers</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="spacer"></div>
+            <div class="notification">
+                <img src="bell_icon.jpg" alt="Notifications" class="bell-icon">
+                <span class="badge">3</span>
+            </div>
+            <div class="auth-buttons">
+                <button class="login active" onclick="toggleAuth('Log In')">Log In</button>
+                <button class="sign-up" onclick="toggleAuth('Sign Up')">Sign Up</button>
+                <div class="adobe-logo">
+                    <img src="adobe_logo.png" alt="Adobe Logo">
+                    <span>Adobe</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="search-header">
+        <div class="container">
+            <div class="search-bar">
+                <button class="filter-button">
+                    <img src="filter.png" alt="Filter" class="filter-icon">
+                    Filter
+                </button>
+                <div class="search-input">
+                    <input type="text" placeholder="Clone" class="search-input-field" id="search-input">
+                    <button class="search-icon">
+                        <img src="search-icon.png" alt="Search">
+                    </button>
+                </div>
+                <div class="recommendation-dropdown">
+                    <button class="sort-button" onclick="toggleRecommendationDropdown()">Recommended</button>
+                    <ul class="recommendation-menu">
+                        <li><a href="#">Most Recent</a></li>
+                        <li><a href="#">Most Popular</a></li>
+                        <li><a href="#">Top Rated</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="gallery">
+            <div class="image-card" onclick="openModal('cafe wall.jpg', 'Cafe', 120, 2400)">
+                <div class="image-container">
+                    <img src="cafe wall.jpg" alt="Cafe Wall">
+                </div>
+                <div class="image-info">
+                    <h4>Cafe</h4>
+                    <p class="author">Chloé</p>
+                    <div class="stats">
+                        <span>❤️ 720</span>
+                        <span>👁️ 9400</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="image-card" onclick="openModal('img2.jpg', 'Stray Kids', 200, 3400)">
+                <div class="image-container">
+                    <img src="img2.jpg" alt="Stray Kids">
+                </div>
+                <div class="image-info">
+                    <h4>Stray Kids</h4>
+                    <p class="author">Ankitha C</p>
+                    <div class="stats">
+                        <span>❤️ 800</span>
+                        <span>👁️ 6400</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-card" onclick="openModal('img4.jpg', 'Harry Potter', 200, 3400)">
+                <div class="image-container">
+                    <img src="img4.jpg" alt="Harry Potter">
+                </div>
+                <div class="image-info">
+                    <h4>Harry Potter</h4>
+                    <p class="author">Franco Peralta</p>
+                    <div class="stats">
+                        <span>❤️ 700</span>
+                        <span>👁️ 8400</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-card" onclick="openModal('img3.jpg', 'SKZ >_<', 200, 3400)">
+                <div class="image-container">
+                    <img src="img3.jpg" alt="SKZ >_<">
+                </div>
+                <div class="image-info">
+                    <h4>SKZ >_<</h4>
+                    <p class="author">Hwang Jaejin</p>
+                    <div class="stats">
+                        <span>❤️ 900</span>
+                        <span>👁️ 10400</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-card" onclick="openModal('img5.jpg', 'Demon Slayer', 200, 3400)">
+                <div class="image-container">
+                    <img src="img5.jpg" alt="Demon Slayer">
+                </div>
+                <div class="image-info">
+                    <h4>Demon Slayer</h4>
+                    <p class="author">Minato</p>
+                    <div class="stats">
+                        <span>❤️ 457</span>
+                        <span>👁️ 5943</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-card" onclick="openModal('img6.jpg', 'Stranger Things', 200, 3400)">
+                <div class="image-container">
+                    <img src="img6.jpg" alt="Stranger Things">
+                </div>
+                <div class="image-info">
+                    <h4>Stranger Things</h4>
+                    <p class="author">Peter Holland</p>
+                    <div class="stats">
+                        <span>❤️ 500</span>
+                        <span>👁️ 4900</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-card" onclick="openModal('img7.jpg', 'Tokyo Ramen Shop', 200, 3400)">
+                <div class="image-container">
+                    <img src="img7.jpg" alt="Tokyo Ramen Shop">
+                </div>
+                <div class="image-info">
+                    <h4>Tokyo Ramen Shop</h4>
+                    <p class="author">Hana Toyoshima</p>
+                    <div class="stats">
+                        <span>❤️ 350</span>
+                        <span>👁️ 3000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-card" onclick="openModal('img8.jpg', 'Black Aesthetic', 200, 3400)">
+                <div class="image-container">
+                    <img src="img8.jpg" alt="Black Aesthetic">
+                </div>
+                <div class="image-info">
+                    <h4>Black Aesthetic</h4>
+                    <p class="author">Joshua Comenetz</p>
+                    <div class="stats">
+                        <span>❤️ 400</span>
+                        <span>👁️ 2400</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more image cards as needed -->
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-img" class="full-image" src="" alt="Full Image">
+            <div id="modal-name"></div>
+            <div id="modal-likes"></div>
+            <div id="modal-views"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
